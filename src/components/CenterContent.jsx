@@ -16,7 +16,7 @@ export const CenterContent = ({ dummyCategory, onClickMore, onClickPlay, onClick
       <PodcastItemCollection content={category.content} onClick={onClickMore} />
       <div className="podcast-panel">
         <div className="podcast-panel-add">
-          <img src="src/assets/search.png" alt="" className="podcast-panel-add-img" />
+          <img src="https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/search.png" alt="" className="podcast-panel-add-img" />
           <p>點擊下方按鈕新增！</p>
           <div className="add-btn" onClick={() => navigate('/search')}>新增 Album</div>
         </div>
@@ -28,7 +28,7 @@ export const CenterContent = ({ dummyCategory, onClickMore, onClickPlay, onClick
     return (
       <div className="podcast-panel">
         <div className="podcast-panel-add">
-          <img src="src/assets/search.png" alt="" className="podcast-panel-add-img" />
+          <img src="https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/search.png" alt="" className="podcast-panel-add-img" />
           <p>您尚未加入任何album，可以點擊下方按鈕新增！</p>
           <div className="add-btn" onClick={() => navigate('/search')}>新增 Album</div>
         </div>

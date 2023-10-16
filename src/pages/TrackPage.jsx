@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import '../css/Track.scss'
 import SpotifyWebApi from 'spotify-web-api-js'
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 export const TrackPage = () => {
   let spotifyApi = new SpotifyWebApi()
@@ -11,6 +12,7 @@ export const TrackPage = () => {
   const [tracksContent, setTracksContent] = useState('')
   const [bugCounter, setBugCounter] = useState(0)
   const [nowPlay, setNowPlay] = useState('https://p.scdn.co/mp3-preview/0bfd163c75bc37c20d9e8598a055a4465a4836bd?cid=d7ae00490ab7405da79f4c323a438f40')
+  const navigate = useNavigate()
 
   // first mission is to get authToken & set spotify api with this token
   function getAuthToken() {
@@ -216,8 +218,8 @@ const handleClickToggleSubscribe = (e) => {
     <div className="track-modal search-panel">
       <div className="modal-title">
         <h3>曲目</h3>
-        <div>
-          <a href='/main'>x</a>
+        <div onClick={() => {navigate('/main')}}>
+          x
         </div>
       </div>
       <hr />

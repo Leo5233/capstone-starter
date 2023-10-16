@@ -141,8 +141,8 @@ export const SearchPage = () => {
       <div className="search-modal search-panel">
         <div className="modal-title">
           <h3>新增podcast</h3>
-          <div>
-            <a href='/main'>x</a>
+          <div onClick={() => {navigate('/main')}}>
+            x
           </div>
         </div>
         <hr />
