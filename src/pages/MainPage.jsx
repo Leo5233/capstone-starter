@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
-const staticPodcast = JSON.parse(localStorage.getItem('staticPodcast'))
 const dummyCategory = [
   { id: 1, title: '通勤清單', src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/commute.png', content: []},
   { id: 2, title: '讀書清單', src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/study.png', content: [] },
@@ -46,17 +45,12 @@ export const MainPage = () => {
 
     const localCategories = JSON.parse(localStorage.getItem('Categories'))
     const localCategoryId = localStorage.getItem('nowCategoryId')
-    console.log(localCategories)
-    console.log(localCategoryId)
     if(!localCategories){
       localStorage.setItem('Categories', JSON.stringify(dummyCategory))
     }
     if(!localCategoryId){
       localStorage.setItem('nowCategoryId', 99)
-    } else {
-      console.log('localCategoryId',localCategoryId)
     }
-
 
   //click different category and change the style by 'active' className
   const handleClickCategory = (e) => {

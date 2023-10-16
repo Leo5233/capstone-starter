@@ -37,7 +37,7 @@ export const TrackPage = () => {
     const albumId = localStorage.getItem('albumId')
     const albumIcon = localStorage.getItem('albumIcon')
     const subscribedItems = JSON.parse(localStorage.getItem('subscribed'))
-    const subscribedIds = []
+    let subscribedIds = []
     if (subscribedItems){
       subscribedIds = subscribedItems.map(track => track.id)
     }
@@ -84,7 +84,6 @@ export const TrackPage = () => {
     const nowPlayItem = document.querySelector('.play-active')
     const player = document.querySelector('.nowPlayer')
     const target = e.target.dataset.url
-    console.log(target)
     if(nowPlayItem && nowPlayItem !== e.target){
       nowPlayItem.classList.remove('play-active')     
     }
@@ -112,7 +111,6 @@ export const TrackPage = () => {
   }
 
 const handleClickToggleSubscribe = (e) => {
-  console.log(e.target.dataset.id)
   const targetClass = [...e.target.classList]
   const subscribedList = JSON.parse(localStorage.getItem('subscribed'))
   let newSubscribedList = []
@@ -138,7 +136,7 @@ const handleClickToggleSubscribe = (e) => {
       audio: e.target.dataset.url,
       image: e.target.dataset.img
     }
-    console.log(newData)
+
     if (!subscribedList) { //subscribe first time
       newSubscribedList = [newData]
     } else { //subscribe
@@ -166,7 +164,7 @@ const handleClickToggleSubscribe = (e) => {
     
   }, [])
   if (bugCounter === 0) { 
-    console.log(bugCounter) //to avoid from loading over and over
+//to avoid from loading over and over
     getAlbumTrack()}
     
   return (<>
