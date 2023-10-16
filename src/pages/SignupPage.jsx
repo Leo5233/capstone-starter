@@ -3,6 +3,7 @@ import { AlphaLogo } from '../components/AlphaLogo'
 import { SlideImg } from '../components/SlideImg'
 import { AuthInput } from '../components/AuthInput'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const SignUpPage = () => {
   const [name, setName] = useState('')
@@ -10,6 +11,7 @@ export const SignUpPage = () => {
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
   const [photoId, setPhotoId] = useState(1)
+  const navigate = useNavigate()
   const handleClickBar = (e) => {
     setPhotoId(e.target.dataset.id)
   }
@@ -42,8 +44,8 @@ export const SignUpPage = () => {
           <AuthInput type="password" label="密碼" placeholder="請輸入密碼"
             onChange={(password) => setPassword(password)}
           />
-          <button className='login-btn'>註冊</button>
-          <h6 className='signup-text'>已經有帳號嗎？<a href="/login">點此登入</a></h6> 
+          <button className='login-btn' onClick={() => navigate('/login')}>註冊</button>
+          <h6 className='signup-text'>已經有帳號嗎？<span onClick={() => navigate('/login')} >點此登入</span></h6> 
         </div>
       </div>
       <div className="entrance-right-contentbox">

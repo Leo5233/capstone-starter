@@ -37,7 +37,7 @@ export const LoginPage = () => {
             onChange={(password) => setPassword(password)}
           />
           <button className='login-btn' onClick={() => navigate('/main')}>登入</button>
-          <h6 className='signup-text'>沒有帳號嗎？<a href="/signup">註冊帳號</a></h6> 
+          <h6 className='signup-text'>沒有帳號嗎？<span onClick={() => navigate('/signup')}>註冊帳號</span></h6> 
         </div>
       </div>
       <div className="entrance-right-contentbox">
