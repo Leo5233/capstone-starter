@@ -30,11 +30,9 @@ function getPosition(element) {
 }
 
 export const MainPage = () => {
-  const [nowCategoryId, setNowCategoryId] = useState(1)
+  const [nowCategoryId, setNowCategoryId] = useState(99)
   const [inputCategoryName, setInputCategoryName] = useState('')
-  //change this  useState to use dummyCategories can reset categories to default
-  // localStorage.setItem('Categories', JSON.stringify(dummyCategory))
-  // localStorage.setItem('nowCategoryId', 99)
+
   const [categories, setCategories] = useState(JSON.parse(localStorage.getItem('Categories')))
   const [nowPlayItemInfo, setNowPlayItemInfo] = useState({
     title: "Starting Your Own Podcast: Tips, Tricks and Advice From Anchor...",
@@ -44,10 +42,22 @@ export const MainPage = () => {
   })
   const [nowCategoryName, setNowCategoryName] = useState('')
   const navigate = useNavigate()
-  // if(!categories){
-  //   setCategories(dummyCategory)
-  // }
-  // localStorage.setItem('Categories', JSON.stringify(dummyCategory))
+//use dummyCategories can reset categories to default
+
+    const localCategories = JSON.parse(localStorage.getItem('Categories'))
+    const localCategoryId = localStorage.getItem('nowCategoryId')
+    console.log(localCategories)
+    console.log(localCategoryId)
+    if(!localCategories){
+      localStorage.setItem('Categories', JSON.stringify(dummyCategory))
+    }
+    if(!localCategoryId){
+      localStorage.setItem('nowCategoryId', 99)
+    } else {
+      console.log('localCategoryId',localCategoryId)
+    }
+
+
   //click different category and change the style by 'active' className
   const handleClickCategory = (e) => {
     if (e.target.className === 'action-scope'){

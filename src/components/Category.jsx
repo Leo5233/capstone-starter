@@ -17,13 +17,14 @@ const Category = ({id, src, title, onClick, active, onClickToggle}) => {
 }
 
 export const CategoryCollection = ({ categories, onClick, onClickToggle }) => {
+  const nowCategoryId = localStorage.getItem('nowCategoryId')
   const listItems = categories.map(category => {
     return (
       <Category key={category.id}
         id={category.id}
         src={category.src}
         title={category.title}
-        active={category.id === 99 ? true : false}
+        active={category.id === Number(nowCategoryId) ? true : false}
         onClick={onClick}
         onClickToggle={onClickToggle}
       />

@@ -19,7 +19,7 @@ export const AlbumCollection = ({searchResult, onClick}) => {
     )
    })
   } else {
-    listItems = (<><div>OOO</div></>)
+    listItems = (<><div>no result</div></>)
   }
   return listItems
 }
