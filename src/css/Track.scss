@@ -1,0 +1,78 @@
+.track-modal{
+  top: 10vh;
+  height: 80vh;
+  .tracks-container{
+    overflow-y: scroll;
+    height: 90%;
+  }
+}
+.track-card {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+
+  img {
+    width: 9vw;
+    max-width: 90px;
+    max-height: 90px;
+    height: 9vw;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+
+  .track-title {
+    font-weight: bold;
+    text-wrap: no-wrap;
+    margin-bottom: 5px;
+
+    .subscribe-tag {
+      position: absolute;
+      width: 16px;
+      height: 20px;
+      top: 5px;
+      right: 50px;
+      background-image: url('../assets/unsubscribed.png');
+      background-size: cover;
+      cursor: pointer;
+
+      &.subscribed {
+        background-image: url('../assets/subscribed.png');
+      }
+    }
+  }
+
+  .track-description {
+    height: 20px;
+    font-size: 14px;
+    color: #777;
+    overflow-y: hidden;
+  }
+
+  .play-btn-panel {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .play-btn {
+      width: 25px;
+      height: 25px;
+      background-image: url('../assets/play.png');
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    .play-active {
+      background-image: url('../assets/pause.png');
+    }
+
+    .track-date-duration {
+      height: 25px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 0px;
+      margin-left: 10px;
+    }
+  }
+}
