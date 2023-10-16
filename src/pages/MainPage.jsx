@@ -37,7 +37,7 @@ export const MainPage = () => {
   const [nowPlayItemInfo, setNowPlayItemInfo] = useState({
     title: "Starting Your Own Podcast: Tips, Tricks and Advice From Anchor...",
     name: "Seinobo Sey",
-    image: "src/assets/cover2.png",
+    image: "https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/cover2.png",
     duration: '4800000'
   })
   const [nowCategoryName, setNowCategoryName] = useState('')

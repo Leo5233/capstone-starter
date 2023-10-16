@@ -37,7 +37,10 @@ export const TrackPage = () => {
     const albumId = localStorage.getItem('albumId')
     const albumIcon = localStorage.getItem('albumIcon')
     const subscribedItems = JSON.parse(localStorage.getItem('subscribed'))
-    const subscribedIds = subscribedItems.map(track => track.id)
+    const subscribedIds = []
+    if (subscribedItems){
+      subscribedIds = subscribedItems.map(track => track.id)
+    }
     // 將拿到的資料全部做渲染，並化成dataset參數透過handleClickToggleSubscribe存到localStorage，給mainPage使用
     spotifyApi.getAlbumTracks(albumId, {limit: 20}) 
       .then(function (data) {
