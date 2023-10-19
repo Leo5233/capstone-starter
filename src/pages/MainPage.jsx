@@ -8,11 +8,11 @@ import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const dummyCategory = [
-  { id: 1, title: '通勤清單', src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/commute.png', content: []},
-  { id: 2, title: '讀書清單', src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/study.png', content: [] },
-  { id: 3, title: '睡前清單', src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/sleep.png', content: [] },
-  { id: 4, title: '我的Podcast', src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/home.png', content: [] },
-  { id: 99, title: '已收藏', src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/heart.png', content: [] }
+  { id: 1, title: '通勤清單', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/commute.png', content: []},
+  { id: 2, title: '讀書清單', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/study.png', content: [] },
+  { id: 3, title: '睡前清單', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/sleep.png', content: [] },
+  { id: 4, title: '我的Podcast', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/home.png', content: [] },
+  { id: 99, title: '已收藏', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/heart.png', content: [] }
 ]
 
 //count the coordination of an element
@@ -36,7 +36,7 @@ export const MainPage = () => {
   const [nowPlayItemInfo, setNowPlayItemInfo] = useState({
     title: "Starting Your Own Podcast: Tips, Tricks and Advice From Anchor...",
     name: "Seinobo Sey",
-    image: "https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/cover2.png",
+    image: "https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/cover2.png",
     duration: '4800000'
   })
   const [nowCategoryName, setNowCategoryName] = useState('')
@@ -110,7 +110,7 @@ export const MainPage = () => {
     const newCategories = [...categories, {
       id: categories.length + 1,
       title: inputCategoryName,
-      src: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/home.png',
+      src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/home.png',
       content: []
     }]
     localStorage.setItem('Categories', JSON.stringify(newCategories))
@@ -207,7 +207,7 @@ export const MainPage = () => {
     if (targetClass.includes('subscribed')) { //unsubscribe   
       newSubscribedList = subscribedList.filter(item => item.id !== e.target.dataset.id)
       Swal.fire({
-        imageUrl: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/success_remove.png',
+        imageUrl: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/success_remove.png',
         imageWidth: 150,
         imageHeight: 50,
         imageAlt: 'success remove',
@@ -232,7 +232,7 @@ export const MainPage = () => {
         newSubscribedList = [...subscribedList, newData]
       }
       Swal.fire({
-        imageUrl: 'https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/success.png',
+        imageUrl: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/success.png',
         imageWidth: 150,
         imageHeight: 50,
         imageAlt: 'success add',

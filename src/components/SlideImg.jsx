@@ -1,6 +1,6 @@
 export const SlideImg = ({ photoId, handleClickArrowMinus, handleClickArrowPlus, handleClickBar}) => {
   return (
-    <div className="slide-show" style={{ backgroundImage: `url('https://raw.githubusercontent.com/Leo5233/Spotify-capstone/master/src/assets/cover${photoId}.png')` }}>
+    <div className="slide-show" style={{ backgroundImage: `url('https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/cover${photoId}.png')` }}>
       <div className="previous-slide" onClick={handleClickArrowMinus}>《</div>
       <div className="next-slide" onClick={handleClickArrowPlus}>》</div>
       <div className="slide-bars" onClick={handleClickBar}>

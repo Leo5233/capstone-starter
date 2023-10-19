@@ -98,11 +98,11 @@ export const SearchPage = () => {
           <AlphaLogo width={'150px'} />
           <hr />
         <CategoryCollection categories={[
-          { id: 1, title: '通勤清單', src: 'src/assets/commute.png', content: [] },
-          { id: 2, title: '讀書清單', src: 'src/assets/study.png', content: [] },
-          { id: 3, title: '睡前清單', src: 'src/assets/sleep.png', content: [] },
-          { id: 4, title: '我的Podcast', src: 'src/assets/home.png', content: [] },
-          { id: 5, title: '已收藏', src: 'src/assets/heart.png', content: [] }
+          { id: 1, title: '通勤清單', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/commute.png', content: [] },
+          { id: 2, title: '讀書清單', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/study.png', content: [] },
+          { id: 3, title: '睡前清單', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/sleep.png', content: [] },
+          { id: 4, title: '我的Podcast', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/home.png', content: [] },
+          { id: 5, title: '已收藏', src: 'https://raw.githubusercontent.com/Leo5233/source/master/capstone-starter/heart.png', content: [] }
         ]}  />
           <div className="add-category" >+ &nbsp;新增分類</div>
         </div>
